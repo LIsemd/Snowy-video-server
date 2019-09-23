@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Snowy-video-server.iml" filepath="$PROJECT_DIR$/.idea/Snowy-video-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-generatorConfig/mybatis-generatorConfig.iml" filepath="$PROJECT_DIR$/mybatis-generatorConfig/mybatis-generatorConfig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/snowy-video-dev/snowy-video-dev.iml" filepath="$PROJECT_DIR$/snowy-video-dev/snowy-video-dev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/snowy-video-dev-common/snowy-video-dev-common.iml" filepath="$PROJECT_DIR$/snowy-video-dev-common/snowy-video-dev-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/snowy-video-dev-mapper/snowy-video-dev-mapper.iml" filepath="$PROJECT_DIR$/snowy-video-dev-mapper/snowy-video-dev-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/snowy-video-dev-mini-api/snowy-video-dev-mini-api.iml" filepath="$PROJECT_DIR$/snowy-video-dev-mini-api/snowy-video-dev-mini-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/snowy-video-dev-pojo/snowy-video-dev-pojo.iml" filepath="$PROJECT_DIR$/snowy-video-dev-pojo/snowy-video-dev-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/snowy-video-dev-service/snowy-video-dev-service.iml" filepath="$PROJECT_DIR$/snowy-video-dev-service/snowy-video-dev-service.iml" />
+    </modules>
+  </component>
+</project>

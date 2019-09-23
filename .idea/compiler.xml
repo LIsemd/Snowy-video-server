@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="snowy-video-dev-service" />
+        <module name="snowy-video-dev-pojo" />
+        <module name="snowy-video-dev-mapper" />
+        <module name="snowy-video-dev-mini-api" />
+        <module name="snowy-video-dev-common" />
+        <module name="mybatis-generatorConfig" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mybatis-generatorConfig" target="1.5" />
+      <module name="snowy-video-dev" target="1.8" />
+      <module name="Snowy-video-dev-common" target="1.7" />
+      <module name="snowy-video-dev-common" target="1.8" />
+      <module name="snowy-video-dev-mapper" target="1.8" />
+      <module name="snowy-video-dev-mini-api" target="1.8" />
+      <module name="snowy-video-dev-pojo" target="1.8" />
+      <module name="snowy-video-dev-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="snowy-video-dev-common" options="-parameters" />
+      <module name="snowy-video-dev-mapper" options="-parameters" />
+      <module name="snowy-video-dev-mini-api" options="-parameters" />
+      <module name="snowy-video-dev-pojo" options="-parameters" />
+      <module name="snowy-video-dev-service" options="-parameters" />
+    </option>
+  </component>
+</project>
