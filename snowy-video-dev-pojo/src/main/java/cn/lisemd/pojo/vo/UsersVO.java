@@ -1,10 +1,8 @@
 package cn.lisemd.pojo.vo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
-import javax.persistence.Column;
-import javax.persistence.Id;
 
 @ApiModel(value = "用户对象", description = "这是用户对象")
 public class UsersVO {
@@ -15,25 +13,29 @@ public class UsersVO {
     @ApiModelProperty(hidden = true)
     private String userToken;
 
+
     @ApiModelProperty(value = "用户名", name = "username", example = "user", required = true)
     private String username;
 
     @ApiModelProperty(value = "密码", name = "password", example = "123456", required = true)
+    @JsonIgnore
     private String password;
 
-    @ApiModelProperty(hidden = true)
-    private String faceImage;
+    private String avatar;
 
     private String nickname;
 
-    @ApiModelProperty(hidden = true)
     private Integer fansCounts;
 
-    @ApiModelProperty(hidden = true)
     private Integer followCounts;
 
-    @ApiModelProperty(hidden = true)
     private Integer receiveLikeCounts;
+
+    private Integer gender;
+
+    private String backgroundImage;
+
+    private String signature;
 
     /**
      * @return id
@@ -78,17 +80,17 @@ public class UsersVO {
     }
 
     /**
-     * @return face_image
+     * @return avatar
      */
-    public String getFaceImage() {
-        return faceImage;
+    public String getAvatar() {
+        return avatar;
     }
 
     /**
-     * @param faceImage
+     * @param avatar
      */
-    public void setFaceImage(String faceImage) {
-        this.faceImage = faceImage;
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
     /**
@@ -147,6 +149,47 @@ public class UsersVO {
         this.receiveLikeCounts = receiveLikeCounts;
     }
 
+    /**
+     * @return gender
+     */
+    public Integer getGender() {
+        return gender;
+    }
+
+    /**
+     * @param gender
+     */
+    public void setGender(Integer gender) {
+        this.gender = gender;
+    }
+
+    /**
+     * @return background_image
+     */
+    public String getBackgroundImage() {
+        return backgroundImage;
+    }
+
+    /**
+     * @param backgroundImage
+     */
+    public void setBackgroundImage(String backgroundImage) {
+        this.backgroundImage = backgroundImage;
+    }
+
+    /**
+     * @return signature
+     */
+    public String getSignature() {
+        return signature;
+    }
+
+    /**
+     * @param signature
+     */
+    public void setSignature(String signature) {
+        this.signature = signature;
+    }
 
     public String getUserToken() {
         return userToken;

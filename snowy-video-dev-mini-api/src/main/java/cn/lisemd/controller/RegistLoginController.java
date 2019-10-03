@@ -1,6 +1,6 @@
 package cn.lisemd.controller;
 
-import cn.lisemd.pojo.Users;
+import cn.lisemd.pojo.UsersInfo;
 import cn.lisemd.pojo.vo.UsersVO;
 import cn.lisemd.service.UserService;
 
@@ -29,21 +29,24 @@ public class RegistLoginController extends BasicController {
 
     @ApiOperation(value = "用户注册", notes = "用户注册的接口")
     @PostMapping("/regist")
-    public SnowyJsonResult regist(@RequestBody Users user) throws Exception {
-
+    public SnowyJsonResult regist(@RequestBody UsersInfo user) throws Exception {
+        String username = user.getUsername();
+        String password = user.getPassword();
         // 1. 判断用户名和密码必须不为空
-        if (StringUtils.isBlank(user.getUsername()) || StringUtils.isBlank(user.getPassword())) {
+        if (StringUtils.isBlank(username) || StringUtils.isBlank(password)) {
             return SnowyJsonResult.errorMsg(" 用户名和密码不能为空 ");
         }
         // 2. 判断用户名是否存在
-        boolean usernameIsExist = userService.queryUsernameIsExist(user.getUsername());
+        boolean usernameIsExist = userService.queryUsernameIsExist(username);
 
         // 3. 保存用户，注册信息
         if (!usernameIsExist) {
-            user.setNickname(user.getUsername());
-            user.setPassword(MD5Utils.getMD5Str(user.getPassword()));
+            user.setNickname(username);
+            user.setPassword(MD5Utils.getMD5Str(password));
             user.setFansCounts(0);
             user.setFollowCounts(0);
+            user.setGender(0);
+            user.setSignature("");
             user.setReceiveLikeCounts(0);
             userService.saveUser(user);
         } else {
@@ -57,7 +60,7 @@ public class RegistLoginController extends BasicController {
 
     @ApiOperation(value = "用户登录", notes = "用户登录的接口")
     @PostMapping("/login")
-    public SnowyJsonResult login(@RequestBody Users user) throws Exception {
+    public SnowyJsonResult login(@RequestBody UsersInfo user) throws Exception {
         String username = user.getUsername();
         String password = user.getPassword();
         // 1. 判断用户名和密码必须不为空
@@ -70,7 +73,7 @@ public class RegistLoginController extends BasicController {
             return SnowyJsonResult.errorMsg(" 用户名不存在 ");
         }
         // 2-2. 判断密码是否正确
-        Users userResult = userService.queryUserIsRight(username, MD5Utils.getMD5Str(password));
+        UsersInfo userResult = userService.queryUserIsRight(username, MD5Utils.getMD5Str(password));
         if (userResult == null) {
             return SnowyJsonResult.errorMsg(" 密码有误，请重试 ");
         }
@@ -84,13 +87,13 @@ public class RegistLoginController extends BasicController {
     @ApiOperation(value = "用户注销", notes = "用户注销的接口")
     @ApiImplicitParam(name = "userId", value = "用户ID", required = true, dataType = "String", paramType = "query")
     @PostMapping("/logout")
-    public SnowyJsonResult logout(String userId) throws Exception {
+    public SnowyJsonResult logout(String userId) {
         redis.del(USER_REDIS_SESSION + ":" + userId);
         return SnowyJsonResult.ok();
     }
 
 
-    public UsersVO setUserRedisSessionToken(Users userModel) {
+    public UsersVO setUserRedisSessionToken(UsersInfo userModel) {
         String uniqueToken = UUID.randomUUID().toString();
         redis.set(USER_REDIS_SESSION + ":" + userModel.getId(), uniqueToken, 1000 * 60 * 30);
 
