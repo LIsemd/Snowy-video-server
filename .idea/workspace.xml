@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce74ac8a-aa7f-43d3-8fc7-1450710efe6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/interceptor/MiniInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/UsersFansMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/UsersFansMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/UsersInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/UsersInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/UsersLikeVideosMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/UsersLikeVideosMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/VideosMapperCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/VideosMapperCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mapper/target/classes/cn/lisemd/mapper/UsersFansMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mapper/target/classes/cn/lisemd/mapper/UsersFansMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mapper/target/classes/cn/lisemd/mapper/UsersInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mapper/target/classes/cn/lisemd/mapper/UsersInfoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mapper/target/classes/cn/lisemd/mapper/UsersLikeVideosMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mapper/target/classes/cn/lisemd/mapper/UsersLikeVideosMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mapper/target/classes/cn/lisemd/mapper/VideosMapperCustom.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mapper/target/classes/cn/lisemd/mapper/VideosMapperCustom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/BgmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/BgmController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/HelloWorldController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/UsersInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/UsersInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/VideosMapperCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/VideosMapperCustom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/WebMvcConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/controller/BgmController.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/controller/BgmController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/controller/HelloWorldController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/controller/VideoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/controller/VideoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/mapper/UsersInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/mapper/UsersInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/mapper/VideosMapperCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/mapper/VideosMapperCustom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-pojo/src/main/java/cn/lisemd/pojo/vo/UsersVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-pojo/src/main/java/cn/lisemd/pojo/vo/UsersVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-pojo/target/classes/cn/lisemd/pojo/vo/UsersVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-pojo/target/classes/cn/lisemd/pojo/vo/UsersVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/VideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/impl/VideoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/cn/lisemd/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/cn/lisemd/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/cn/lisemd/service/VideoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/cn/lisemd/service/VideoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/cn/lisemd/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/cn/lisemd/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/cn/lisemd/service/impl/VideoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/cn/lisemd/service/impl/VideoServiceImpl.class" afterDir="false" />
-    </list>
+    <list default="true" id="ce74ac8a-aa7f-43d3-8fc7-1450710efe6f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/snowy-video-dev/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/snowy-video-dev-common/target/" />
@@ -287,48 +252,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Snowy-video-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Snowy-video-server" type="462c0819:PsiDirectoryNode" />
-              <item name="snowy-video-dev-mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Snowy-video-server" type="462c0819:PsiDirectoryNode" />
-              <item name="snowy-video-dev-mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Snowy-video-server" type="462c0819:PsiDirectoryNode" />
-              <item name="snowy-video-dev-mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Snowy-video-server" type="462c0819:PsiDirectoryNode" />
-              <item name="snowy-video-dev-mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Snowy-video-server" type="462c0819:PsiDirectoryNode" />
-              <item name="snowy-video-dev-mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
@@ -441,6 +370,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -615,11 +545,12 @@
       <workItem from="1570376689185" duration="947000" />
       <workItem from="1570458046800" duration="1556000" />
       <workItem from="1570521976615" duration="622000" />
+      <workItem from="1570545437923" duration="298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149513000" />
+    <option name="totallyTimeSpent" value="149811000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -631,10 +562,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49514562" visible="true" weight="0.22989276" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49514562" visible="true" weight="0.23324397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -650,7 +580,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32956153" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.33002833" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.33002833" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.33569404" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3286119" />
