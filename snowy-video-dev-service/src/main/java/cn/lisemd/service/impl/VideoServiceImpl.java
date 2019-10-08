@@ -1,9 +1,8 @@
 package cn.lisemd.service.impl;
 
-import cn.lisemd.mapper.SearchRecordsMapper;
-import cn.lisemd.mapper.VideosMapper;
-import cn.lisemd.mapper.VideosMapperCustom;
+import cn.lisemd.mapper.*;
 import cn.lisemd.pojo.SearchRecords;
+import cn.lisemd.pojo.UsersLikeVideos;
 import cn.lisemd.pojo.Videos;
 import cn.lisemd.pojo.vo.VideosVO;
 import cn.lisemd.utils.PagedResult;
@@ -15,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -34,12 +34,18 @@ public class VideoServiceImpl implements VideoService {
     @Autowired
     private SearchRecordsMapper searchRecordsMapper;
 
+    @Autowired
+    private UsersLikeVideosMapper usersLikeVideosMapper;
+
+    @Autowired
+    private UsersInfoMapper usersInfoMapper;
+
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
-    public PagedResult getAllVideos(Videos video, Integer isSaveRecord, Integer page, Integer pageSize) {
+    public PagedResult getVideos(Videos video, Integer isSaveRecord, Integer page, Integer pageSize) {
         // 保存热搜词
         String desc = video.getVideoDesc();
-
+        String userId = video.getUserId();
         if (isSaveRecord != null && isSaveRecord == 1) {
             SearchRecords record = new SearchRecords();
             String recordId = sid.nextShort();
@@ -49,7 +55,7 @@ public class VideoServiceImpl implements VideoService {
         }
 
         PageHelper.startPage(page, pageSize);
-        List<VideosVO> list = videosMapperCustom.queryAllVideos(desc);
+        List<VideosVO> list = videosMapperCustom.queryAllVideos(desc, userId);
 
         PageInfo<VideosVO> pageList = new PageInfo<>(list);
         PagedResult pagedResult = new PagedResult();
@@ -61,11 +67,74 @@ public class VideoServiceImpl implements VideoService {
         return pagedResult;
     }
 
+    /**
+     * 获取全部视频
+     *
+     * @return
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public List<VideosVO> getAllVideos() {
+        List<VideosVO> videosList = videosMapperCustom.queryAllVideos("","");
+
+        return videosList;
+    }
+
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public List<String> getHotwords() {
         return searchRecordsMapper.getHotwords();
     }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void userLikeVideo(String userId, String videoId, String videoCreaterId) {
+
+        // 1.保存用户和视频的喜欢点赞关联关系表
+        String likeId = sid.nextShort();
+        UsersLikeVideos usersLikeVideos = new UsersLikeVideos();
+        usersLikeVideos.setId(likeId);
+        usersLikeVideos.setUserId(userId);
+        usersLikeVideos.setVideoId(videoId);
+
+        usersLikeVideosMapper.insert(usersLikeVideos);
+
+        // 2.视频喜欢数量累加
+
+        videosMapperCustom.addVideoLikeCount(videoId);
+
+        // 3.用户受喜欢数量累加
+
+        usersInfoMapper.addReceiveLikeCount(videoCreaterId);
+    }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void userUnlikeVideo(String userId, String videoId, String videoCreaterId) {
+        // 1.删除用户和视频的喜欢点赞关联关系表
+
+        Example example = new Example(UsersLikeVideos.class);
+        Example.Criteria criteria = example.createCriteria();
+
+        criteria.andEqualTo("userId", userId);
+        criteria.andEqualTo("videoId", videoId);
+
+        usersLikeVideosMapper.deleteByExample(example);
+        // 2.视频喜欢数量累减
+
+        videosMapperCustom.reduceVideoLikeCount(videoId);
+
+        // 3.用户受喜欢数量累减
+
+        usersInfoMapper.reduceReceiveLikeCount(videoCreaterId);
+    }
+
+    @Override
+    public List<VideosVO> queryUserLike(String userId) {
+        List<VideosVO> list = videosMapperCustom.queryUserLike(userId);
+        return list;
+    }
+
 
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
@@ -84,5 +153,6 @@ public class VideoServiceImpl implements VideoService {
         video.setCoverPath(coverPath);
         videosMapper.updateByPrimaryKeySelective(video);
     }
+
 
 }

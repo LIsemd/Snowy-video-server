@@ -10,5 +10,25 @@ import java.util.List;
 
 @Repository
 public interface VideosMapperCustom extends MyMapper<Videos> {
-    List<VideosVO> queryAllVideos(@Param("videoDesc") String videoDesc);
+    /**
+     *  查找视频
+     */
+    List<VideosVO> queryAllVideos(@Param("videoDesc") String videoDesc, @Param("userId") String userId);
+
+    /**
+     * 对视频喜欢的数量进行累加
+     */
+    void addVideoLikeCount(String videoId);
+
+    /**
+     * 对视频喜欢的数量进行累减
+     */
+    void reduceVideoLikeCount(String videoId);
+
+    /**
+     *  查找用户点赞视频
+     */
+    List<VideosVO> queryUserLike(String videoId);
+
+
 }

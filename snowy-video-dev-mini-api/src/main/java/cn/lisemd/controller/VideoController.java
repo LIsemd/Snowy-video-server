@@ -3,6 +3,7 @@ package cn.lisemd.controller;
 import cn.lisemd.enums.VideoStatusEnum;
 import cn.lisemd.pojo.Bgm;
 import cn.lisemd.pojo.Videos;
+import cn.lisemd.pojo.vo.VideosVO;
 import cn.lisemd.service.BgmService;
 import cn.lisemd.service.VideoService;
 import cn.lisemd.utils.FetchVideoCover;
@@ -23,6 +24,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -197,17 +199,67 @@ public class VideoController extends BasicController {
      * @param page
      * @return
      */
-    @PostMapping(value = "/showAll")
-    public SnowyJsonResult showAll(@RequestBody Videos video, Integer isSaveRecord, Integer page) {
+    @PostMapping(value = "/showVideos")
+    public SnowyJsonResult showVideos(@RequestBody Videos video, Integer isSaveRecord, Integer page) {
         if (page == null) {
             page = 1;
         }
-        PagedResult result = videoService.getAllVideos(video, isSaveRecord, page, PAGE_SIZE);
+        PagedResult result = videoService.getVideos(video, isSaveRecord, page, PAGE_SIZE);
         return SnowyJsonResult.ok(result);
     }
 
+    /**
+     * 获取所有视频列表
+     * @return
+     */
+    @ApiOperation(value = "获取所有视频", notes = "获取所有视频的接口")
+    @PostMapping(value = "/showAllVideos")
+    public SnowyJsonResult showAllVideos() {
+
+        List<VideosVO> result = videoService.getAllVideos();
+        return SnowyJsonResult.ok(result);
+    }
+
+    /**
+     * 获取热搜词
+     * @return
+     */
     @PostMapping(value = "/hot")
     public SnowyJsonResult hot() {
         return SnowyJsonResult.ok(videoService.getHotwords());
     }
+
+    /**
+     *  用户点赞
+     */
+    @PostMapping(value = "/userLike")
+    public SnowyJsonResult userLike(String userId,String videoId,String videoCreaterId) {
+
+        videoService.userLikeVideo(userId,videoId,videoCreaterId);
+
+        return SnowyJsonResult.ok();
+    }
+
+    /**
+     *  用户取消点赞
+     */
+    @PostMapping(value = "/userUnlike")
+    public SnowyJsonResult userUnlike(String userId,String videoId,String videoCreaterId) {
+
+        videoService.userUnlikeVideo(userId,videoId,videoCreaterId);
+
+        return SnowyJsonResult.ok();
+    }
+
+    /**
+     *  显示点赞过的视频
+     */
+    @PostMapping(value = "/showUserLike")
+    public SnowyJsonResult showUserLike(String userId) {
+
+        List<VideosVO> list = videoService.queryUserLike(userId);
+
+        return SnowyJsonResult.ok(list);
+    }
+
 }

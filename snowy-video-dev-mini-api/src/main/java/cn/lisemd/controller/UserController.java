@@ -176,18 +176,60 @@ public class UserController extends BasicController {
     }
 
     @ApiOperation(value = "查询用户信息", notes = "查询用户信息的接口")
-    @ApiImplicitParam(name = "userId", value = "用户ID", required = true, dataType = "String", paramType = "query")
+    @ApiImplicitParams({
+        @ApiImplicitParam(name = "userId", value = "创作者ID", required = true, dataType = "String", paramType = "query"),
+        @ApiImplicitParam(name = "fanId", value = "登录者ID", required = false, dataType = "String", paramType = "query")
+    })
     @PostMapping("/query")
-    public SnowyJsonResult query(String userId) {
+    public SnowyJsonResult query(String userId,String fanId) {
 
         if (StringUtils.isBlank(userId)) {
-            return SnowyJsonResult.errorMsg("用户ID不能为空！");
+            return SnowyJsonResult.errorMsg("");
         }
 
         UsersInfo user = userService.queryUserInfo(userId);
         UsersVO userVO = new UsersVO();
+        if (fanId != null) {
+            userVO.setFollow(userService.queryIsFollow(userId, fanId));
+        }
         BeanUtils.copyProperties(user, userVO);
 
         return SnowyJsonResult.ok(userVO);
+    }
+
+
+    @ApiOperation(value = "查询用户点赞信息", notes = "查询用户点赞信息的接口")
+    @PostMapping("/queryUserLike")
+    public SnowyJsonResult queryUserLike(String userId, String videoId) {
+
+        if (StringUtils.isBlank(userId) || StringUtils.isBlank(videoId)) {
+            return SnowyJsonResult.errorMsg("");
+        }
+        // 查询当前登录者和视频的点赞关系
+        boolean userLikeVideo = userService.isUserLikeVideo(userId,videoId);
+
+        return SnowyJsonResult.ok(userLikeVideo);
+    }
+
+    @ApiOperation(value = "关注用户", notes = "关注用户的接口")
+    @PostMapping("/follow")
+    public SnowyJsonResult follow(String userId, String fanId) {
+
+        if (StringUtils.isBlank(userId) || StringUtils.isBlank(fanId)) {
+            return SnowyJsonResult.errorMsg("");
+        }
+        userService.saveUserFanRelation(userId,fanId);
+        return SnowyJsonResult.ok();
+    }
+
+    @ApiOperation(value = "取消关注用户", notes = "取消关注用户的接口")
+    @PostMapping("/unFollow")
+    public SnowyJsonResult unFollow(String userId, String fanId) {
+
+        if (StringUtils.isBlank(userId) || StringUtils.isBlank(fanId)) {
+            return SnowyJsonResult.errorMsg("");
+        }
+        userService.deleteUserFanRelation(userId,fanId);
+        return SnowyJsonResult.ok();
     }
 }

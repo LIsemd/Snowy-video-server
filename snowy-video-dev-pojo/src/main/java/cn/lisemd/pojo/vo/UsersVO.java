@@ -14,6 +14,9 @@ public class UsersVO {
     private String userToken;
 
 
+
+    private Boolean isFollow;
+
     @ApiModelProperty(value = "用户名", name = "username", example = "user", required = true)
     private String username;
 
@@ -37,6 +40,14 @@ public class UsersVO {
 
     private String signature;
 
+
+    public Boolean getFollow() {
+        return isFollow;
+    }
+
+    public void setFollow(Boolean follow) {
+        isFollow = follow;
+    }
     /**
      * @return id
      */

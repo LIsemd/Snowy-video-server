@@ -16,9 +16,17 @@ public class BgmController {
 
     @Autowired
     private BgmService bgmService;
+
     @ApiOperation(value = "获取背景音乐列表", notes = "获取背景音乐列表的接口")
     @PostMapping("/list")
     public SnowyJsonResult list() {
         return SnowyJsonResult.ok(bgmService.queryBgmList());
     }
+
+    @ApiOperation(value = "根据ID获取背景音乐信息", notes = "根据ID获取背景音乐信息的接口")
+    @PostMapping("/getBgmInfo")
+    public SnowyJsonResult getBgmInfo(String id) {
+        return SnowyJsonResult.ok(bgmService.queryBgmById(id));
+    }
+
 }

@@ -36,4 +36,26 @@ public interface UserService {
      */
     UsersInfo queryUserInfo(String userId);
 
+
+    /**
+     * 查询用户点赞信息
+     * @param userId
+     */
+    Boolean isUserLikeVideo(String userId, String videoId);
+
+
+    /**
+     * 关注
+     */
+    void saveUserFanRelation(String userId, String fanId);
+
+    /**
+     * 取消关注
+     */
+    void deleteUserFanRelation(String userId, String fanId);
+
+    /**
+     * 查询用户是否有关注
+     */
+    boolean queryIsFollow(String userId, String fanId);
 }
