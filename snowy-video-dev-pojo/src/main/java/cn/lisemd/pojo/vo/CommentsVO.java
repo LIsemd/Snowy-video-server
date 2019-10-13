@@ -1,28 +1,77 @@
-package cn.lisemd.pojo;
+package cn.lisemd.pojo.vo;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
 import java.util.Date;
-import javax.persistence.*;
 
-public class Comments {
-    @Id
+public class CommentsVO {
     private String id;
-
-    @Column(name = "to_user_id")
     private String toUserId;
-
-    @Column(name = "father_comment_id")
     private String fatherCommentId;
-
-    @Column(name = "video_id")
     private String videoId;
-
-    @Column(name = "from_user_id")
     private String fromUserId;
-
-    @Column(name = "create_date")
     private Date createDate;
-
+    // 评论内容
     private String comment;
+    private String avatar;
+    private String nickname;
+    private String timeAgoStr;
+    private String userId;
+    private String videoDesc;
+    private String coverPath;
+
+
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getVideoDesc() {
+        return videoDesc;
+    }
+
+    public void setVideoDesc(String videoDesc) {
+        this.videoDesc = videoDesc;
+    }
+
+    public String getCoverPath() {
+        return coverPath;
+    }
+
+    public void setCoverPath(String coverPath) {
+        this.coverPath = coverPath;
+    }
+
+
+
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public String getTimeAgoStr() {
+        return timeAgoStr;
+    }
+
+    public void setTimeAgoStr(String timeAgoStr) {
+        this.timeAgoStr = timeAgoStr;
+    }
 
     /**
      * @return id

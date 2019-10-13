@@ -2,7 +2,9 @@ package cn.lisemd.controller;
 
 import cn.lisemd.enums.VideoStatusEnum;
 import cn.lisemd.pojo.Bgm;
+import cn.lisemd.pojo.Comments;
 import cn.lisemd.pojo.Videos;
+import cn.lisemd.pojo.vo.CommentsVO;
 import cn.lisemd.pojo.vo.VideosVO;
 import cn.lisemd.service.BgmService;
 import cn.lisemd.service.VideoService;
@@ -60,21 +62,19 @@ public class VideoController extends BasicController {
 
         // 设置上传的最终保存路径
         String finalVideoPath = "";
+        String finalCoverPath = "";
+        String fileName = null;
+
         FileOutputStream fileOutputStream = null;
         InputStream inputStream = null;
         try {
             if (file != null) {
-                String fileName = file.getOriginalFilename();
-                // 获取前缀
-                String fileNamePrefix = fileName.split("\\.")[0];
-
+                fileName = file.getOriginalFilename();
                 if (StringUtils.isNotBlank(fileName)) {
-
                     // 设置数据库的保存路径
                     uploadPathDB += ("/" + fileName);
-                    coverPathDB += ("/" + fileNamePrefix + ".jpg");
-
                     finalVideoPath = FILE_SPACE + uploadPathDB;
+
                     File outFile = new File(finalVideoPath);
                     if (outFile.getParentFile() != null || !outFile.getParentFile().isDirectory()) {
                         // 创建父文件夹
@@ -110,12 +110,14 @@ public class VideoController extends BasicController {
             finalVideoPath = FILE_SPACE + uploadPathDB;
 
             tool.convertor(videoInputPath, mp3InputPath, duration, finalVideoPath);
-
         }
+        // 获取前缀
+        String fileNamePrefix = fileName.split("\\.")[0];
+        coverPathDB += ("/" + fileNamePrefix + UUID.randomUUID().toString() + ".jpg");
+        finalCoverPath = FILE_SPACE + coverPathDB;
         // 对视频进行截图
         FetchVideoCover ffmpeg = new FetchVideoCover(FFMPEG_EXE);
-        ffmpeg.convertor(finalVideoPath, FILE_SPACE + coverPathDB);
-
+        ffmpeg.convertor(finalVideoPath, finalCoverPath);
         // 保存视频信息到数据库
         Videos video = new Videos();
         video.setAudioId(bgmId);
@@ -193,7 +195,8 @@ public class VideoController extends BasicController {
     /**
      * 分页和搜索查询视频列表
      * isSaveRecord: 1 - 需要保存
-     *               0 - 不保存
+     * 0 - 不保存
+     *
      * @param video
      * @param isSaveRecord
      * @param page
@@ -210,6 +213,7 @@ public class VideoController extends BasicController {
 
     /**
      * 获取所有视频列表
+     *
      * @return
      */
     @ApiOperation(value = "获取所有视频", notes = "获取所有视频的接口")
@@ -222,6 +226,7 @@ public class VideoController extends BasicController {
 
     /**
      * 获取热搜词
+     *
      * @return
      */
     @PostMapping(value = "/hot")
@@ -230,29 +235,29 @@ public class VideoController extends BasicController {
     }
 
     /**
-     *  用户点赞
+     * 用户点赞
      */
     @PostMapping(value = "/userLike")
-    public SnowyJsonResult userLike(String userId,String videoId,String videoCreaterId) {
+    public SnowyJsonResult userLike(String userId, String videoId, String videoCreaterId) {
 
-        videoService.userLikeVideo(userId,videoId,videoCreaterId);
+        videoService.userLikeVideo(userId, videoId, videoCreaterId);
 
         return SnowyJsonResult.ok();
     }
 
     /**
-     *  用户取消点赞
+     * 用户取消点赞
      */
     @PostMapping(value = "/userUnlike")
-    public SnowyJsonResult userUnlike(String userId,String videoId,String videoCreaterId) {
+    public SnowyJsonResult userUnlike(String userId, String videoId, String videoCreaterId) {
 
-        videoService.userUnlikeVideo(userId,videoId,videoCreaterId);
+        videoService.userUnlikeVideo(userId, videoId, videoCreaterId);
 
         return SnowyJsonResult.ok();
     }
 
     /**
-     *  显示点赞过的视频
+     * 显示点赞过的视频
      */
     @PostMapping(value = "/showUserLike")
     public SnowyJsonResult showUserLike(String userId) {
@@ -262,4 +267,49 @@ public class VideoController extends BasicController {
         return SnowyJsonResult.ok(list);
     }
 
+    /**
+     * 显示我关注的人发的视频
+     */
+    @PostMapping(value = "/showMyFollowVideos")
+    public SnowyJsonResult showMyFollowVideos(String userId) throws Exception {
+
+        if (StringUtils.isBlank(userId)) {
+            return SnowyJsonResult.ok();
+        }
+
+        List<VideosVO> videoList = videoService.queryMyFollowVideos(userId);
+
+        return SnowyJsonResult.ok(videoList);
+    }
+
+    @ApiOperation(value = "用户留言", notes = "用户留言的接口")
+    @PostMapping("/saveComment")
+    public SnowyJsonResult saveComment(@RequestBody Comments comment) {
+        videoService.saveComment(comment);
+        return SnowyJsonResult.ok();
+    }
+
+    @ApiOperation(value = "获取视频用户留言", notes = "获取视频用户留言的接口")
+    @PostMapping("/getVideoComments")
+    public SnowyJsonResult getVideoComments(String videoId) {
+        if (StringUtils.isBlank(videoId)) {
+            return SnowyJsonResult.ok();
+        }
+
+        List<CommentsVO> list = videoService.getVideoComments(videoId);
+
+        return SnowyJsonResult.ok(list);
+    }
+
+    @ApiOperation(value = "获取我发布的视频内其他用户的留言", notes = "获取我发布的视频内其他用户的留言的接口")
+    @PostMapping("/getAllComments")
+    public SnowyJsonResult getAllComments(String userId) {
+        if (StringUtils.isBlank(userId)) {
+            return SnowyJsonResult.ok();
+        }
+
+        List<CommentsVO> list = videoService.getAllComments(userId);
+
+        return SnowyJsonResult.ok(list);
+    }
 }

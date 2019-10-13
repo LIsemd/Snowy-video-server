@@ -1,6 +1,9 @@
 package cn.lisemd.service;
 
+import cn.lisemd.pojo.Comments;
+import cn.lisemd.pojo.UsersInfo;
 import cn.lisemd.pojo.Videos;
+import cn.lisemd.pojo.vo.CommentsVO;
 import cn.lisemd.pojo.vo.VideosVO;
 import cn.lisemd.utils.PagedResult;
 
@@ -65,4 +68,25 @@ public interface VideoService {
      */
     List<VideosVO> queryUserLike(String userId);
 
+
+    /**
+     * 分页查询关注用户的视频列表
+     */
+    List<VideosVO> queryMyFollowVideos(String userId);
+
+
+    /**
+     * 用户留言
+     */
+    void saveComment(Comments comment);
+
+    /**
+     * 获取视频用户留言
+     */
+    List<CommentsVO> getVideoComments(String videoId);
+
+    /**
+     * 获取全部视频留言
+     */
+    List<CommentsVO> getAllComments(String userId);
 }

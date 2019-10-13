@@ -18,19 +18,17 @@ public class FetchVideoCover {
     }
 
     public void convertor(String videoInputPath, String coverOutputPath) throws Exception {
-        // ffmpeg.exe -ss 00:00:01 -i XXX.mp3 -vframes 1 xx.jpg
+        // ffmpeg.exe -ss 00:00:01 -i XXX.mp4 -vframes 1 xx.jpg
         List<String> command = new ArrayList<>();
         command.add(ffmpegEXE);
 
         command.add("-ss");
         command.add("00:00:01");
-
+        command.add("-y");
         command.add("-i");
         command.add(videoInputPath);
-
         command.add("-vframes");
         command.add("1");
-
         command.add(coverOutputPath);
 
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.lisemd.mapper.CommentsMapperCustom">
+    <resultMap id="BaseResultMap" type="cn.lisemd.pojo.vo.CommentsVO">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="to_user_id" property="toUserId" jdbcType="VARCHAR"/>
+        <result column="father_comment_id" property="fatherCommentId" jdbcType="VARCHAR"/>
+        <result column="video_id" property="videoId" jdbcType="VARCHAR"/>
+        <result column="from_user_id" property="fromUserId" jdbcType="VARCHAR"/>
+        <result column="create_date" property="createDate" jdbcType="TIMESTAMP"/>
+        <result column="comment" property="comment" jdbcType="LONGVARCHAR"/>
+    </resultMap>
+
+    <select id="getVideoComments" resultMap="BaseResultMap" parameterType="String">
+        select c.*, u.avatar as avatar, u.nickname, tu.nickname as toNickname
+        from comments c
+                 left join users_info u on c.from_user_id = u.id
+                 left join users_info tu on c.to_user_id = tu.id
+        where c.video_id = #{videoId}
+        order by c.create_date asc
+    </select>
+    <!--查询我发布的视频中除我以外的所有评论-->
+    <select id="getAllComments" resultMap="BaseResultMap" parameterType="String">
+        select total.*,v.user_id as userId,v.video_desc as videoDesc,v.cover_path as coverPath
+        from (select c.*, u.avatar as avatar, u.nickname as nickname
+              from comments c
+                       left join users_info u on c.from_user_id = u.id
+              where c.from_user_id != #{userId}) as total
+                 left join videos v on total.video_id = v.id
+        where v.user_id = #{userId}
+        order by total.create_date desc
+    </select>
+</mapper>

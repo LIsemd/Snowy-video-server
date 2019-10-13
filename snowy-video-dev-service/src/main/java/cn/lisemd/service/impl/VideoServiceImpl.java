@@ -1,11 +1,14 @@
 package cn.lisemd.service.impl;
 
 import cn.lisemd.mapper.*;
+import cn.lisemd.pojo.Comments;
 import cn.lisemd.pojo.SearchRecords;
 import cn.lisemd.pojo.UsersLikeVideos;
 import cn.lisemd.pojo.Videos;
+import cn.lisemd.pojo.vo.CommentsVO;
 import cn.lisemd.pojo.vo.VideosVO;
 import cn.lisemd.utils.PagedResult;
+import cn.lisemd.utils.TimeAgo;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.n3r.idworker.Sid;
@@ -16,6 +19,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -39,6 +43,12 @@ public class VideoServiceImpl implements VideoService {
 
     @Autowired
     private UsersInfoMapper usersInfoMapper;
+
+    @Autowired
+    private CommentsMapper commentsMapper;
+
+    @Autowired
+    private CommentsMapperCustom commentsMapperCustom;
 
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
@@ -69,8 +79,6 @@ public class VideoServiceImpl implements VideoService {
 
     /**
      * 获取全部视频
-     *
-     * @return
      */
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
@@ -152,6 +160,50 @@ public class VideoServiceImpl implements VideoService {
         video.setId(videoId);
         video.setCoverPath(coverPath);
         videosMapper.updateByPrimaryKeySelective(video);
+    }
+
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public List<VideosVO> queryMyFollowVideos(String userId) {
+
+
+        List<VideosVO> list = videosMapperCustom.queryMyFollowVideos(userId);
+
+
+        return list;
+    }
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void saveComment(Comments comment) {
+        String id = sid.nextShort();
+        comment.setId(id);
+        comment.setCreateDate(new Date());
+        commentsMapper.insert(comment);
+    }
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public List<CommentsVO> getVideoComments(String videoId) {
+
+        List<CommentsVO> list = commentsMapperCustom.getVideoComments(videoId);
+
+        for(CommentsVO c: list) {
+            String timeAgo = TimeAgo.format(c.getCreateDate());
+            c.setTimeAgoStr(timeAgo);
+        }
+
+        return list;
+    }
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public List<CommentsVO> getAllComments(String userId) {
+        List<CommentsVO> list = commentsMapperCustom.getAllComments(userId);
+
+        for(CommentsVO c: list) {
+            String timeAgo = TimeAgo.format(c.getCreateDate());
+            c.setTimeAgoStr(timeAgo);
+        }
+        return list;
     }
 
 

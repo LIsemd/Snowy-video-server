@@ -1,58 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="cn.lisemd.mapper.VideosMapperCustom" >
-  <resultMap id="BaseResultMap" type="cn.lisemd.pojo.vo.VideosVO" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="id" property="id" jdbcType="VARCHAR" />
-    <result column="user_id" property="userId" jdbcType="VARCHAR" />
-    <result column="audio_id" property="audioId" jdbcType="VARCHAR" />
-    <result column="video_desc" property="videoDesc" jdbcType="VARCHAR" />
-    <result column="video_path" property="videoPath" jdbcType="VARCHAR" />
-    <result column="video_seconds" property="videoSeconds" jdbcType="REAL" />
-    <result column="video_width" property="videoWidth" jdbcType="INTEGER" />
-    <result column="video_height" property="videoHeight" jdbcType="INTEGER" />
-    <result column="cover_path" property="coverPath" jdbcType="VARCHAR" />
-    <result column="like_counts" property="likeCounts" jdbcType="BIGINT" />
-    <result column="status" property="status" jdbcType="INTEGER" />
-    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
-    <result column="avatar" property="avatar" jdbcType="VARCHAR" />
-    <result column="nickname" property="nickname" jdbcType="VARCHAR" />
-  </resultMap>
-  <!--这里必须使用_parameter  否则报错  There is no getter for property named 'videoDesc'
-    原因： 拼接字符串${xxx}和占位符#{xxx}不同的是，java不会自动将${xxx}对应成_parameter-->
-  <select id="queryAllVideos" resultMap="BaseResultMap" parameterType="String">
-    select v.*,u.avatar as avatar,u.nickname as nickname from videos v
-    left join users_info u on u.id = v.user_id
-    where
+<mapper namespace="cn.lisemd.mapper.VideosMapperCustom">
+    <resultMap id="BaseResultMap" type="cn.lisemd.pojo.vo.VideosVO">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="user_id" property="userId" jdbcType="VARCHAR"/>
+        <result column="audio_id" property="audioId" jdbcType="VARCHAR"/>
+        <result column="video_desc" property="videoDesc" jdbcType="VARCHAR"/>
+        <result column="video_path" property="videoPath" jdbcType="VARCHAR"/>
+        <result column="video_seconds" property="videoSeconds" jdbcType="REAL"/>
+        <result column="video_width" property="videoWidth" jdbcType="INTEGER"/>
+        <result column="video_height" property="videoHeight" jdbcType="INTEGER"/>
+        <result column="cover_path" property="coverPath" jdbcType="VARCHAR"/>
+        <result column="like_counts" property="likeCounts" jdbcType="BIGINT"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="avatar" property="avatar" jdbcType="VARCHAR"/>
+        <result column="nickname" property="nickname" jdbcType="VARCHAR"/>
+    </resultMap>
+    <!--这里必须使用_parameter  否则报错  There is no getter for property named 'videoDesc'
+      原因： 拼接字符串${xxx}和占位符#{xxx}不同的是，java不会自动将${xxx}对应成_parameter-->
+    <select id="queryAllVideos" resultMap="BaseResultMap" parameterType="String">
+        select v.*,u.avatar as avatar,u.nickname as nickname from videos v
+        left join users_info u on u.id = v.user_id
+        where
         1 = 1
         <if test="_parameter.videoDesc != null and _parameter.videoDesc != ''">
-          and v.video_desc like '%${_parameter.videoDesc}%'
+            and v.video_desc like '%${_parameter.videoDesc}%'
         </if>
         <if test="_parameter.userId != null and _parameter.userId != ''">
-          and v.user_id = #{_parameter.userId}
+            and v.user_id = #{_parameter.userId}
         </if>
         and v.status = 1
-    order by v.create_time desc
-  </select>
-
-  <!-- 查找用户喜欢的视频 -->
-  <select id="queryUserLike" resultMap="BaseResultMap" parameterType="String">
-    select  v.*, u.avatar as avatar,u.nickname as nickname from videos v
-    left join users_info u on v.user_id = u.id
-    where
-        v.id in (select ulv.video_id from users_like_videos ulv where ulv.user_id = #{userId})
-        and v.status = 1
         order by v.create_time desc
-  </select>
+    </select>
 
+    <!-- 查找用户喜欢的视频 -->
+    <select id="queryUserLike" resultMap="BaseResultMap" parameterType="String">
+        select v.*, u.avatar as avatar, u.nickname as nickname
+        from videos v
+                 left join users_info u on v.user_id = u.id
+        where v.id in (select ulv.video_id from users_like_videos ulv where ulv.user_id = #{userId})
+          and v.status = 1
+        order by v.create_time desc
+    </select>
 
-  <update id="addVideoLikeCount"  parameterType="String">
-    update videos set like_counts=like_counts+1 where id=#{videoId}
-  </update>
+    <!-- 点赞 -->
+    <update id="addVideoLikeCount" parameterType="String">
+        update videos
+        set like_counts=like_counts + 1
+        where id = #{videoId}
+    </update>
+    <!-- 取消点赞 -->
+    <update id="reduceVideoLikeCount" parameterType="String">
+        update videos
+        set like_counts=like_counts - 1
+        where id = #{videoId}
+    </update>
 
-  <update id="reduceVideoLikeCount"  parameterType="String">
-    update videos set like_counts=like_counts-1 where id=#{videoId}
-  </update>
+    <!-- 查找关注用户发布的视频 -->
+    <select id="queryMyFollowVideos" resultMap="BaseResultMap" parameterType="String">
+        select v.*, u.avatar as avatar, u.nickname as nickname
+        from videos v
+                 left join users_info u on v.user_id = u.id
+        where v.user_id in (select uf.user_id from users_fans uf where uf.fan_id = #{userId})
+          and v.status = 1
+        order by v.create_time desc
+    </select>
 </mapper>

@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface VideosMapperCustom extends MyMapper<Videos> {
     /**
-     *  查找视频
+     *  根据输入查找视频
      */
     List<VideosVO> queryAllVideos(@Param("videoDesc") String videoDesc, @Param("userId") String userId);
 
@@ -30,5 +30,8 @@ public interface VideosMapperCustom extends MyMapper<Videos> {
      */
     List<VideosVO> queryUserLike(String videoId);
 
-
+    /**
+     *  查找关注用户发布的视频
+     */
+    List<VideosVO> queryMyFollowVideos(String userId);
 }

@@ -3,10 +3,12 @@ package cn.lisemd.service.impl;
 import cn.lisemd.mapper.UsersFansMapper;
 import cn.lisemd.mapper.UsersInfoMapper;
 import cn.lisemd.mapper.UsersLikeVideosMapper;
+import cn.lisemd.mapper.UsersReportMapper;
 import cn.lisemd.pojo.UsersFans;
 import cn.lisemd.pojo.UsersInfo;
 
 import cn.lisemd.pojo.UsersLikeVideos;
+import cn.lisemd.pojo.UsersReport;
 import cn.lisemd.service.UserService;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 import tk.mybatis.mapper.entity.Example.Criteria;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -29,6 +32,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UsersFansMapper usersFansMapper;
+
+    @Autowired
+    private UsersReportMapper usersReportMapper;
 
     @Autowired
     private Sid sid;
@@ -159,5 +165,25 @@ public class UserServiceImpl implements UserService {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public List<UsersInfo> queryFollows(String userId) {
+        return usersInfoMapper.queryFollows(userId);
+    }
+
+    @Override
+    public List<UsersInfo> queryFans(String userId) {
+        return usersInfoMapper.queryFans(userId);
+    }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void reportUser(UsersReport usersReport) {
+        String id = sid.nextShort();
+        usersReport.setId(id);
+        usersReport.setCreateDate(new Date());
+
+        usersReportMapper.insert(usersReport);
     }
 }

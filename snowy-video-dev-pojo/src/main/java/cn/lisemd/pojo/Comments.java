@@ -1,11 +1,18 @@
 package cn.lisemd.pojo;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
 import java.util.Date;
-import javax.persistence.*;
 
 public class Comments {
     @Id
     private String id;
+
+    @Column(name = "to_user_id")
+    private String toUserId;
+
+    @Column(name = "father_comment_id")
+    private String fatherCommentId;
 
     @Column(name = "video_id")
     private String videoId;
@@ -30,6 +37,34 @@ public class Comments {
      */
     public void setId(String id) {
         this.id = id;
+    }
+
+    /**
+     * @return to_user_id
+     */
+    public String getToUserId() {
+        return toUserId;
+    }
+
+    /**
+     * @param toUserId
+     */
+    public void setToUserId(String toUserId) {
+        this.toUserId = toUserId;
+    }
+
+    /**
+     * @return father_comment_id
+     */
+    public String getFatherCommentId() {
+        return fatherCommentId;
+    }
+
+    /**
+     * @param fatherCommentId
+     */
+    public void setFatherCommentId(String fatherCommentId) {
+        this.fatherCommentId = fatherCommentId;
     }
 
     /**

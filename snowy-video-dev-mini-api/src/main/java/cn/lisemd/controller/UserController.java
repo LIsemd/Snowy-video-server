@@ -1,6 +1,8 @@
 package cn.lisemd.controller;
 
+import cn.lisemd.pojo.Comments;
 import cn.lisemd.pojo.UsersInfo;
+import cn.lisemd.pojo.UsersReport;
 import cn.lisemd.pojo.vo.UsersVO;
 import cn.lisemd.service.UserService;
 import cn.lisemd.utils.SnowyJsonResult;
@@ -18,6 +20,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.util.List;
 
 
 @RestController
@@ -232,4 +235,35 @@ public class UserController extends BasicController {
         userService.deleteUserFanRelation(userId,fanId);
         return SnowyJsonResult.ok();
     }
+
+    @ApiOperation(value = "获取关注用户信息", notes = "获取关注用户信息的接口")
+    @PostMapping("/queryFollows")
+    public SnowyJsonResult queryFollows(String userId) {
+
+        if (StringUtils.isBlank(userId)) {
+            return SnowyJsonResult.errorMsg("");
+        }
+        List<UsersInfo> list = userService.queryFollows(userId);
+        return SnowyJsonResult.ok(list);
+    }
+
+    @ApiOperation(value = "获取粉丝信息", notes = "获取粉丝信息的接口")
+    @PostMapping("/queryFans")
+    public SnowyJsonResult queryFans(String userId) {
+
+        if (StringUtils.isBlank(userId)) {
+            return SnowyJsonResult.errorMsg("");
+        }
+        List<UsersInfo> list = userService.queryFans(userId);
+        return SnowyJsonResult.ok(list);
+    }
+
+    @ApiOperation(value = "举报用户", notes = "举报用户的接口")
+    @PostMapping("/reportUser")
+    public SnowyJsonResult reportUser(@RequestBody UsersReport usersReport) {
+
+        userService.reportUser(usersReport);
+        return SnowyJsonResult.ok("举报成功！");
+    }
+
 }

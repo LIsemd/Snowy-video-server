@@ -1,6 +1,9 @@
 package cn.lisemd.service;
 
 import cn.lisemd.pojo.UsersInfo;
+import cn.lisemd.pojo.UsersReport;
+
+import java.util.List;
 
 public interface UserService {
 
@@ -58,4 +61,16 @@ public interface UserService {
      * 查询用户是否有关注
      */
     boolean queryIsFollow(String userId, String fanId);
+
+    /**
+     * 获取我关注的用户的信息
+     */
+    List<UsersInfo> queryFollows(String userId);
+
+    /**
+     * 获取我的粉丝的信息
+     */
+    List<UsersInfo> queryFans(String userId);
+
+    void reportUser(UsersReport usersReport);
 }
