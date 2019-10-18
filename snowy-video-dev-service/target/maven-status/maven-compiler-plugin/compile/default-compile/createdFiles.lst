@@ -1,0 +1,6 @@
+cn\lisemd\service\impl\UserServiceImpl.class
+cn\lisemd\service\BgmService.class
+cn\lisemd\service\impl\BgmServiceImpl.class
+cn\lisemd\service\VideoService.class
+cn\lisemd\service\impl\VideoServiceImpl.class
+cn\lisemd\service\UserService.class

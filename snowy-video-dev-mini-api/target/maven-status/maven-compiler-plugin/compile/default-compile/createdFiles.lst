@@ -1,0 +1,11 @@
+cn\lisemd\controller\HelloController.class
+cn\lisemd\controller\UserController.class
+cn\lisemd\controller\BasicController.class
+cn\lisemd\Application.class
+cn\lisemd\Swagger2.class
+cn\lisemd\controller\VideoController.class
+cn\lisemd\WebMvcConfig.class
+cn\lisemd\controller\RegistLoginController.class
+cn\lisemd\interceptor\MiniInterceptor.class
+cn\lisemd\controller\BgmController.class
+cn\lisemd\WarStartApplication.class

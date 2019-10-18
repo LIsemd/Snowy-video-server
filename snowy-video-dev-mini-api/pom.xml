@@ -9,6 +9,8 @@
         <relativePath>../snowy-video-dev/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <!--  打包成war  -->
+    <packaging>war</packaging>
 
     <artifactId>snowy-video-dev-mini-api</artifactId>
 
@@ -17,6 +19,12 @@
             <groupId>cn.lisemd</groupId>
             <artifactId>snowy-video-dev-service</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+    <!--    添加依赖，打包成war    -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

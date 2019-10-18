@@ -83,9 +83,6 @@ public class UserController extends BasicController {
      * @throws Exception
      */
     public String saveImage(MultipartFile[] files, String uploadPathDB) throws Exception {
-        // 文件保存的命名空间
-        String fileSpace = "D:\\项目\\Web实战项目\\snowy_video_dev";
-
         FileOutputStream fileOutputStream = null;
         InputStream inputStream = null;
         try {
@@ -93,7 +90,7 @@ public class UserController extends BasicController {
                 String fileName = files[0].getOriginalFilename();
                 if (StringUtils.isNotBlank(fileName)) {
                     // 设置上传的最终保存路径
-                    String finalImagePath = fileSpace + uploadPathDB + "/" + fileName;
+                    String finalImagePath = FILE_SPACE + uploadPathDB + "/" + fileName;
                     // 设置数据库的保存路径
                     uploadPathDB += ("/" + fileName);
 

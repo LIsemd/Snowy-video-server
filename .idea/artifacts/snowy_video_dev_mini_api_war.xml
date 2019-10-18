@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="snowy-video-dev-mini-api:war">
+    <output-path>$PROJECT_DIR$/snowy-video-dev-mini-api/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>snowy-video-dev-mini-api</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="snowy-video-dev-mini-api-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="snowy-video-dev-mini-api:war exploded" />
+    </root>
+  </artifact>
+</component>

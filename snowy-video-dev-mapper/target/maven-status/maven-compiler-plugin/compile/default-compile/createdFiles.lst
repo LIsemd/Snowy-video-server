@@ -1,0 +1,10 @@
+cn\lisemd\mapper\SearchRecordsMapper.class
+cn\lisemd\mapper\UsersFansMapper.class
+cn\lisemd\mapper\UsersReportMapper.class
+cn\lisemd\mapper\CommentsMapperCustom.class
+cn\lisemd\mapper\VideosMapper.class
+cn\lisemd\mapper\UsersLikeVideosMapper.class
+cn\lisemd\mapper\UsersInfoMapper.class
+cn\lisemd\mapper\CommentsMapper.class
+cn\lisemd\mapper\VideosMapperCustom.class
+cn\lisemd\mapper\BgmMapper.class

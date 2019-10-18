@@ -2,63 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce74ac8a-aa7f-43d3-8fc7-1450710efe6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/snowy-video-dev-common/src/main/java/cn/lisemd/utils/TimeAgo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/snowy_video_dev_mini_api_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/snowy_video_dev_mini_api_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/WarStartApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-generatorConfig/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/mapper/BgmMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/mapper/CommentsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/CommentsMapperCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/mapper/SearchRecordsMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/mapper/UsersFansMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/mapper/UsersInfoMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/mapper/UsersLikeVideosMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/mapper/UsersReportMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/mapper/VideosMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/pojo/Bgm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/pojo/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-pojo/src/main/java/cn/lisemd/pojo/vo/CommentsVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/pojo/SearchRecords.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/pojo/UsersFans.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/pojo/UsersInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/pojo/UsersLikeVideos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/pojo/UsersReport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/pojo/Videos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/BgmMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/CommentsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/CommentsMapperCustom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/SearchRecordsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/UsersFansMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/UsersInfoMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/UsersLikeVideosMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/UsersReportMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/VideosMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-common/src/main/java/cn/lisemd/utils/FetchVideoCover.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-common/src/main/java/cn/lisemd/utils/FetchVideoCover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-common/target/classes/cn/lisemd/utils/FetchVideoCover.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-common/target/classes/cn/lisemd/utils/FetchVideoCover.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/CommentsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/CommentsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/UsersInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/UsersInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/VideosMapperCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/VideosMapperCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mapper/target/classes/cn/lisemd/mapper/CommentsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mapper/target/classes/cn/lisemd/mapper/CommentsMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mapper/target/classes/cn/lisemd/mapper/UsersInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mapper/target/classes/cn/lisemd/mapper/UsersInfoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mapper/target/classes/cn/lisemd/mapper/VideosMapperCustom.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mapper/target/classes/cn/lisemd/mapper/VideosMapperCustom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mapper/target/classes/META-INF/snowy-video-dev-mapper.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/snowy-video-dev-mini-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/snowy-video-dev-mini-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/BasicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/BasicController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/CommentsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/CommentsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/UsersInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/UsersInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/VideosMapperCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/VideosMapperCustom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/WebMvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/META-INF/snowy-video-dev-mini-api.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/controller/BasicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/controller/BasicController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/controller/VideoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/cn/lisemd/controller/VideoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/mapper/CommentsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/mapper/CommentsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/mapper/UsersInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/mapper/UsersInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/mapper/VideosMapperCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-mini-api/target/classes/mapper/VideosMapperCustom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-pojo/src/main/java/cn/lisemd/pojo/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-pojo/src/main/java/cn/lisemd/pojo/Comments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-pojo/target/classes/cn/lisemd/pojo/Comments.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-pojo/target/classes/cn/lisemd/pojo/Comments.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/VideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/impl/VideoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/cn/lisemd/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/cn/lisemd/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/cn/lisemd/service/VideoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/cn/lisemd/service/VideoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/cn/lisemd/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/cn/lisemd/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/cn/lisemd/service/impl/VideoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/cn/lisemd/service/impl/VideoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snowy-video-dev-pojo/target/classes/META-INF/snowy-video-dev-pojo.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snowy-video-dev-service/target/classes/META-INF/snowy-video-dev-service.kotlin_module" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/snowy-video-dev/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -97,10 +62,79 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1675">
+              <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/RegistLoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2000">
+              <caret line="98" selection-start-line="98" selection-end-line="98" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/HelloController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/BgmController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/VideoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/VideoService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2000">
+              <caret line="87" column="7" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/impl/VideoServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-373">
-              <caret line="183" column="42" lean-forward="true" selection-start-line="183" selection-start-column="42" selection-end-line="183" selection-end-column="42" />
+            <state relative-caret-position="2750">
+              <caret line="183" column="42" selection-start-line="183" selection-start-column="42" selection-end-line="183" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getVideos#0;class#VideoServiceImpl#0" />
@@ -115,98 +149,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snowy-video-dev-common/src/main/java/cn/lisemd/utils/TimeAgo.java">
+        <entry file="file://$PROJECT_DIR$/snowy-video-dev-common/src/main/java/cn/lisemd/utils/MergeVideo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1759#1760#0" expanded="true" />
-                <element signature="e#1794#1795#0" expanded="true" />
-                <element signature="e#1841#1842#0" expanded="true" />
-                <element signature="e#1885#1886#0" expanded="true" />
-                <element signature="e#1930#1931#0" expanded="true" />
-                <element signature="e#1974#1975#0" expanded="true" />
-                <element signature="e#2018#2019#0" expanded="true" />
-                <element signature="e#2060#2061#0" expanded="true" />
-                <element signature="e#2106#2107#0" expanded="true" />
-                <element signature="e#2147#2148#0" expanded="true" />
-                <element signature="e#2192#2193#0" expanded="true" />
-                <element signature="e#2236#2237#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/CommentsMapperCustom.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="13" column="16" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snowy-video-dev-pojo/src/main/java/cn/lisemd/pojo/vo/CommentsVO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-              <folding>
-                <element signature="e#501#502#0" expanded="true" />
-                <element signature="e#530#531#0" expanded="true" />
-                <element signature="e#574#575#0" expanded="true" />
-                <element signature="e#610#611#0" expanded="true" />
-                <element signature="e#646#647#0" expanded="true" />
-                <element signature="e#678#679#0" expanded="true" />
-                <element signature="e#728#729#0" expanded="true" />
-                <element signature="e#770#771#0" expanded="true" />
-                <element signature="e#806#807#0" expanded="true" />
-                <element signature="e#838#839#0" expanded="true" />
-                <element signature="e#888#889#0" expanded="true" />
-                <element signature="e#930#931#0" expanded="true" />
-                <element signature="e#619#620#0" expanded="true" />
-                <element signature="e#650#651#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/VideoService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="87" column="7" lean-forward="true" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/VideoController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="309" lean-forward="true" selection-start-line="309" selection-end-line="309" />
+            <state relative-caret-position="325">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/CommentsMapperCustom.xml">
+        <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/BasicController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+            <state relative-caret-position="432">
+              <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/VideosMapper.xml">
+        <entry file="file://$PROJECT_DIR$/snowy-video-dev-common/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="15" column="30" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="30" />
+            <state relative-caret-position="3350">
+              <caret line="134" column="21" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -241,18 +208,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mybatis-generatorConfig/src/main/java/cn/lisemd/mapper/UsersMapper.java" />
-        <option value="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/UsersMapper.xml" />
-        <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/Swagger2.java" />
-        <option value="$PROJECT_DIR$/snowy-video-dev-pojo/src/main/java/cn/lisemd/pojo/Users.java" />
-        <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/UsersMapper.xml" />
         <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/Application.java" />
         <option value="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/UsersMapper.java" />
         <option value="$PROJECT_DIR$/snowy-video-dev-common/src/main/java/cn/lisemd/utils/RedisOperator.java" />
         <option value="$PROJECT_DIR$/snowy-video-dev-common/pom.xml" />
         <option value="$PROJECT_DIR$/snowy-video-dev/pom.xml" />
         <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/RegistLoginController.java" />
-        <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/BgmMapper.java" />
         <option value="$PROJECT_DIR$/snowy-video-dev-common/src/main/java/cn/lisemd/utils/JsonUtils.java" />
@@ -265,7 +226,6 @@
         <option value="$PROJECT_DIR$/snowy-video-dev-pojo/src/main/java/cn/lisemd/pojo/Videos.java" />
         <option value="$PROJECT_DIR$/snowy-video-dev-pojo/src/main/java/cn/lisemd/pojo/vo/VideosVO.java" />
         <option value="$PROJECT_DIR$/snowy-video-dev-common/src/main/java/cn/lisemd/utils/PagedResult.java" />
-        <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/BasicController.java" />
         <option value="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/SearchRecordsMapper.java" />
         <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/SearchRecordsMapper.xml" />
         <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/BgmController.java" />
@@ -281,7 +241,6 @@
         <option value="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/UserService.java" />
         <option value="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/WebMvcConfig.java" />
-        <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/UserController.java" />
         <option value="$PROJECT_DIR$/mybatis-generatorConfig/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/snowy-video-dev-pojo/src/main/java/cn/lisemd/pojo/Comments.java" />
         <option value="$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/CommentsMapper.java" />
@@ -292,8 +251,32 @@
         <option value="$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/impl/VideoServiceImpl.java" />
         <option value="$PROJECT_DIR$/snowy-video-dev-pojo/src/main/java/cn/lisemd/pojo/vo/CommentsVO.java" />
         <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/CommentsMapperCustom.xml" />
+        <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/pom.xml" />
+        <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/WarStartApplication.java" />
+        <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/application-dev.properties" />
+        <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/HelloController.java" />
+        <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/application-prod.properties" />
+        <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/BasicController.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Snowy小程序-短视频实战" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Snowy小程序-短视频实战" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
@@ -317,51 +300,6 @@
             <path>
               <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Snowy-video-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Snowy-video-server" type="462c0819:PsiDirectoryNode" />
-              <item name="snowy-video-dev-common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Snowy-video-server" type="462c0819:PsiDirectoryNode" />
-              <item name="snowy-video-dev-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Snowy-video-server" type="462c0819:PsiDirectoryNode" />
-              <item name="snowy-video-dev-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Snowy-video-server" type="462c0819:PsiDirectoryNode" />
-              <item name="snowy-video-dev-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Snowy-video-server" type="462c0819:PsiDirectoryNode" />
-              <item name="snowy-video-dev-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lisemd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Snowy-video-server" type="462c0819:PsiDirectoryNode" />
-              <item name="snowy-video-dev-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lisemd" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
@@ -420,10 +358,7 @@
               <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Snowy-video-server" type="462c0819:PsiDirectoryNode" />
               <item name="snowy-video-dev-mini-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Snowy-video-server" type="b2602c69:ProjectViewProjectNode" />
@@ -487,7 +422,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -511,11 +446,11 @@
       <recent name="cn.lisemd.service.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\项目\Web实战项目\Snowy-video-server\snowy-video-dev-mini-api\src\main\resources" />
       <recent name="D:\项目\Web实战项目\Snowy-video-server\snowy-video-dev-mini-api\src\main\resources\mapper" />
       <recent name="D:\项目\Web实战项目\Snowy-video-server\snowy-video-dev-common\src\main\java\cn\lisemd\utils" />
       <recent name="D:\项目\Web实战项目\Snowy-video-server\snowy-video-dev-common\src\main\java" />
       <recent name="D:\项目\Web实战项目\Snowy-video-server\mybatis-generatorConfig\src\main\resources\mapper" />
-      <recent name="D:\项目\Web实战项目\Snowy-video-server\mybatis-generatorConfig\src\main\java\cn\lisemd\mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -657,11 +592,22 @@
       <workItem from="1570789197057" duration="3490000" />
       <workItem from="1570875124925" duration="7027000" />
       <workItem from="1570928888984" duration="11315000" />
+      <workItem from="1570960958781" duration="170000" />
+      <workItem from="1570966932961" duration="886000" />
+      <workItem from="1571128132294" duration="4616000" />
+      <workItem from="1571188660967" duration="2429000" />
+      <workItem from="1571231081480" duration="741000" />
+      <workItem from="1571242021208" duration="186000" />
+      <workItem from="1571279512626" duration="2427000" />
+      <workItem from="1571283745076" duration="2427000" />
+      <workItem from="1571286612545" duration="3298000" />
+      <workItem from="1571305197678" duration="1431000" />
+      <workItem from="1571323809786" duration="17000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190666000" />
+    <option name="totallyTimeSpent" value="209294000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -676,7 +622,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49514562" visible="true" weight="0.21179625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49514562" visible="true" weight="0.24463807" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -692,7 +638,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32956153" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.26203966" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.26062322" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.33569404" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3286119" />
@@ -703,7 +649,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.12600537" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.3297587" />
@@ -752,99 +698,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/BgmMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-common/src/main/java/cn/lisemd/enums/VideoStatusEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-common/src/main/java/cn/lisemd/utils/SnowyJsonResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="44" column="45" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-common/src/main/java/cn/lisemd/utils/MergeVideo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-275">
-          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-pojo/src/main/java/cn/lisemd/pojo/vo/VideosVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.8/pagehelper-5.1.8-sources.jar!/com/github/pagehelper/PageInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1625">
-          <caret line="88" column="11" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
-          <folding>
-            <element signature="e#2486#2487#0" expanded="true" />
-            <element signature="e#2515#2516#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1-sources.jar!/org/apache/commons/lang3/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="211" column="26" selection-start-line="211" selection-start-column="26" selection-end-line="211" selection-end-column="26" />
-          <folding>
-            <element signature="e#7787#7788#0" expanded="true" />
-            <element signature="e#7840#7841#0" expanded="true" />
-            <element signature="e#8492#8493#0" expanded="true" />
-            <element signature="e#8527#8528#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-common/src/main/java/cn/lisemd/utils/PagedResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/SearchRecordsMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-common/src/main/java/cn/lisemd/utils/MyMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/SearchRecordsMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -875,26 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
           <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/RegistLoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="81" column="31" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/BasicController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="12" selection-start-line="12" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1095,17 +928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="267" selection-start-line="267" selection-end-line="267" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#saveImage#0;class#UserController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mybatis-generatorConfig/generatorConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
@@ -1140,16 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/BgmController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/VideosMapperCustom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1160,9 +972,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-pojo/src/main/java/cn/lisemd/pojo/Comments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/snowy-video-dev-common/src/main/java/cn/lisemd/utils/TimeAgo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
+        <state relative-caret-position="625">
           <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1182,17 +1001,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-pojo/src/main/java/cn/lisemd/pojo/Comments.java">
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/CommentsMapperCustom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="26" />
+        <state relative-caret-position="200">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-pojo/src/main/java/cn/lisemd/pojo/vo/CommentsVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/CommentsMapperCustom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/WarStartApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/VideosMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/application-dev.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/application-prod.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-common/src/main/java/cn/lisemd/utils/RedisOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1675">
+          <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/RegistLoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2000">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/BgmController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/VideoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/VideoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="87" column="7" lean-forward="true" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
+        <state relative-caret-position="2000">
+          <caret line="87" column="7" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1201,8 +1143,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/snowy-video-dev-service/src/main/java/cn/lisemd/service/impl/VideoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-373">
-          <caret line="183" column="42" lean-forward="true" selection-start-line="183" selection-start-column="42" selection-end-line="183" selection-end-column="42" />
+        <state relative-caret-position="2750">
+          <caret line="183" column="42" selection-start-line="183" selection-start-column="42" selection-end-line="183" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getVideos#0;class#VideoServiceImpl#0" />
@@ -1215,54 +1157,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/VideosMapper.xml">
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-common/src/main/java/cn/lisemd/utils/MergeVideo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="30" />
+        <state relative-caret-position="325">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mapper/src/main/java/cn/lisemd/mapper/CommentsMapperCustom.java">
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-common/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="19" />
+        <state relative-caret-position="3350">
+          <caret line="134" column="21" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/VideoController.java">
+    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/java/cn/lisemd/controller/BasicController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="309" lean-forward="true" selection-start-line="309" selection-end-line="309" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-pojo/src/main/java/cn/lisemd/pojo/vo/CommentsVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        <state relative-caret-position="432">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
           <folding>
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-            <element signature="e#728#729#0" expanded="true" />
-            <element signature="e#770#771#0" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#888#889#0" expanded="true" />
-            <element signature="e#930#931#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snowy-video-dev-mini-api/src/main/resources/mapper/CommentsMapperCustom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
         </state>
       </provider>
     </entry>
